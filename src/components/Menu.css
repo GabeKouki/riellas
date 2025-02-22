@@ -1,0 +1,135 @@
+.MenuContainer {
+  /*TODO: Change to margin and fix background color */
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+.MenuHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.MenuHeader h1 {
+  color: var(--primary-text-color);
+
+}
+
+.MenuLine {
+  width: 33%;
+  height: 1px;
+  background-color: var(--primary-text-color);
+}
+
+.Disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+} 
+
+.Disclaimer p {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+
+/*! DropdownSection */
+.DropdownContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.DropdownHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  cursor: pointer;
+  background-color: var(--primary-text-color);
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+
+.DropdownItem {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+}
+
+.DropdownContent {
+  position: absolute;
+}
+
+.DropdownHeader h5 {
+  color: var(--background-color);
+}
+
+.DropdownArrow {
+  height: 25px;
+  width: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+.MenuItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100vw;
+  padding: 0 10px;
+}
+
+.MenuItem {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fade-in 2.5s forwards ;
+}
+ 
+.DropdownButton {
+  padding: 10px;
+  background-color: transparent;
+  color: var(--primary-text-color);
+  border: none;
+  cursor: pointer;
+}
+
+.MenuItem h2 {
+  font-size: 18px;
+  color: var(--primary-text-color);
+}
+
+.MenuItem p {
+  font-size: 18px;
+  color: var(--primary-text-color);
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}

@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Perpetua Titling MT', sans-serif;
+  scrollbar-width: none;
 }
 
 :root {
-  --background-color: rgb(18, 18, 18);
+  --background-color: #121212;
   --primary-text-color: #fdffe8;
   --primary-accent-color: #fb0808;
 }
