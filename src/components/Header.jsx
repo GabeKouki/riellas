@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
 
-  const answer = 10 * 4 + 10 * 2 + 10 * 2 + 10 * 2;
   return (
     <header className="HeaderContainer">
       <nav>

@@ -1,9 +1,8 @@
 .MenuContainer {
-  /*TODO: Change to margin and fix background color */
+  box-sizing: border-box;
   padding-top: 50px;
-  display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
@@ -15,11 +14,12 @@
   justify-content: center;
   gap: 10px;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .MenuHeader h1 {
   color: var(--primary-text-color);
-
+  margin: 0;
 }
 
 .MenuLine {
@@ -34,98 +34,53 @@
   justify-content: center;
   color: var(--primary-text-color);
   margin-bottom: 20px;
-} 
+}
 
 .Disclaimer p {
   font-size: 14px;
   letter-spacing: 0.5px;
+  margin: 0;
 }
-
-
-/*! DropdownSection */
-.DropdownContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-
-.DropdownHeader {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  cursor: pointer;
-  background-color: var(--primary-text-color);
-  padding: 10px 12px;
-  border-radius: 4px;
-}
-
-.DropdownItem {
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
-  position: relative;
-  display: inline-block;
-}
-
-.DropdownContent {
-  position: absolute;
-}
-
-.DropdownHeader h5 {
-  color: var(--background-color);
-}
-
-.DropdownArrow {
-  height: 25px;
-  width: 25px;
-}
-
-
-
-
-
-
-
-
-
 
 .MenuItems {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100vw;
-  padding: 0 10px;
+  gap: 0 20px;
+  width: 100%;
+  padding: 0 50px; 
+  box-sizing: border-box;
 }
 
 .MenuItem {
-  padding: 0 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   opacity: 0;
-  animation: fade-in 2.5s forwards ;
+  animation: fade-in 0.4s forwards;
 }
- 
+
+.MenuItem h2 {
+  font-size: 16px;
+  color: var(--primary-text-color);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.MenuItem p {
+  font-size: 16px;
+  color: var(--primary-text-color);
+  margin: 0;
+  white-space: nowrap; 
+}
+
 .DropdownButton {
   padding: 10px;
   background-color: transparent;
   color: var(--primary-text-color);
   border: none;
   cursor: pointer;
-}
-
-.MenuItem h2 {
-  font-size: 18px;
-  color: var(--primary-text-color);
-}
-
-.MenuItem p {
-  font-size: 18px;
-  color: var(--primary-text-color);
 }
 
 @keyframes fade-in {

@@ -11,6 +11,7 @@ const Hero = () => {
         <img src={RiellasHomestyleLogo} alt="riellas-homestyle-logo" />
         {/* //TODO: Fix the fucking number so people can click to call. */}
         <p>3103 North Jerusalem Road Levittown, NY 11756 | (845) 777-7777</p>
+        <span className="HeroDivider"/>
         <span className="Slogan">Where great food brings people together</span>
 
         <button type="button" className="BtnPrimary">
