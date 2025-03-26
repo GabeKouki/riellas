@@ -1,0 +1,31 @@
+.HeroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 105px;
+}
+
+.HeroLogo {
+  width: 310px;
+  height: 123px;
+  margin-top: 65px;
+}
+
+.HeroFork {
+  width: 100vw;
+}
+
+
+.HeroButton {
+  position: fixed;
+  bottom: 30px;
+  border: none;
+  background-color: var(--primary-green);
+  opacity: 0.7;
+  color: white;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+}

@@ -1,0 +1,16 @@
+.NavHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.NavHeader p {
+  color: white;
+  font-size: 18px;
+}
+
+.NavHamburger {
+  height: 45px;
+  width: 45px;
+}
