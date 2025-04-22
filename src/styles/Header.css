@@ -1,0 +1,74 @@
+nav {
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+
+.HeaderLogo {
+  width: 121px;
+  height: auto;
+  margin-left: 60px;
+}
+
+.HeaderButtonContainer {
+  display: flex;
+  gap: 32px;
+  padding-right: 60px;
+}
+
+.HeaderButton {
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15.75px;
+  line-height: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.HeaderButton.fill {
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.HeaderChevron {
+  transition: all 0.3s ease;
+}
+
+.HeaderHamburger {
+  display: none;
+}
+
+.HeaderButton:hover {
+  color: red;
+}
+
+@media screen and (max-width: 650px) {
+  .HeaderButtonContainer {
+    display: none;
+  }
+
+  .HeaderHamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .HeaderLogo {
+    margin-left: 20px;
+  }
+}

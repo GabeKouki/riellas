@@ -1,0 +1,56 @@
+.SidebarContainer {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+
+  .SidebarContainer {
+    position: absolute;
+    height: calc(100vh - 80px);
+    width: 220px;
+    right: 0;
+    top: 80px;
+    background-color: var(--alt-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    padding-left: 16px;
+    padding-top: 40px;
+  }
+
+  .SidebarContainer button {
+    padding: 8px 12px;
+
+  }
+
+  .SidebarContainer.slideIn {
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+
+  .SidebarContainer.slideOut {
+    animation: slideOut 0.5s ease-in-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+}
