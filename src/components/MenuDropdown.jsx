@@ -17,6 +17,7 @@ const MenuDropdown = ({ menuOpen, setMenuOpen }) => {
     if (!menuOpen) return;
 
     const handleClickOutside = (e) => {
+      if (menuOpen) return;
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setMenuOpen(false);
       }
