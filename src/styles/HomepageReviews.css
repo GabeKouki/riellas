@@ -1,0 +1,99 @@
+.HomepageReviewsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--background-color);
+  gap: 64px;
+}
+
+.ReviewsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ReviewsSplitText h1 {
+  font-size: 33.61px;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+.ReviewsSplitText h1:first-child {
+  color: var(--primary-red);
+}
+
+.ReviewsSplitText h1:last-child {
+  color: var(--primary-green);
+}
+
+.ReviewsHeader p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  max-width: 60ch;
+}
+
+.ReviewsBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.ReviewCard {
+  background-color: rgba(17, 24, 39, 0.5);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  max-width: 320px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--alt-background-color);
+}
+
+.ReviewCard:hover {
+  transform: translateY(-4px);
+}
+
+.Stars {
+  font-size: 20px;
+  color: var(--primary-red);
+}
+
+.ReviewText {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.ReviewerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.ReviewerName {
+  font-weight: 300;
+  justify-self: flex-end;
+  font-size: 15.75px;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.ReviewerRole {
+  font-size: 14px;
+  color: var(--primary-red);
+  font-family: "Inter", sans-serif;
+}

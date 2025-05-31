@@ -1,7 +1,7 @@
 import "./App.css";
 
-import Home from "./Routes/Home";
-import Header from "./Shared/Header";
+import Home from "./routes/Home";
+import Header from "./shared/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HeaderProvider } from './context/HeaderContext'
 

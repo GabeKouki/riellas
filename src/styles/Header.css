@@ -27,6 +27,8 @@ nav {
 .HeaderButton {
   align-items: center;
   display: flex;
+  justify-content: center;
+  gap: 4px;
   background-color: transparent;
   color: #fff;
   font-size: 15.75px;
