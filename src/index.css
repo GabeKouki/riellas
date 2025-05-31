@@ -26,8 +26,3 @@ html {
   scrollbar-width: none;      
   -ms-overflow-style: none; 
 }
-
-html, body {
-  height: 100%;
-  overflow: auto;
-}

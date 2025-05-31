@@ -1,17 +1,21 @@
 import "../styles/Header.css";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import RiellasLogo from "../assets/RiellasLogo.svg";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useHeader } from "../context/HeaderContext";
 import Sidebar from "../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 import MenuDropdown from "../components/MenuDropdown";
+import { motion, useScroll } from "framer-motion";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { sidebarOpen, setSidebarOpen, header, setHeader } = useHeader();
+  const { sidebarOpen, setSidebarOpen } = useHeader();
   const navigate = useNavigate();
+  const { scrollYProgress } = useScroll();
+
 
   const handleNavigate = (endpoint) => {
     setMenuOpen(false);
@@ -22,9 +26,19 @@ const Header = () => {
     <>
       <header>
         <nav>
-          <img className="HeaderLogo" src={RiellasLogo} alt="Riellas Logo" onClick={() => handleNavigate("/")} />
+          <img
+            className="HeaderLogo"
+            src={RiellasLogo}
+            alt="Riellas Logo"
+            onClick={() => handleNavigate("/")}
+          />
           <div className="HeaderButtonContainer">
-            <button className="HeaderButton" onClick={() => handleNavigate("/")}>Home</button>
+            <button
+              className="HeaderButton"
+              onClick={() => handleNavigate("/")}
+            >
+              Home
+            </button>
             <button
               className={`HeaderButton ${menuOpen ? "fill" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}
@@ -34,7 +48,12 @@ const Header = () => {
                 className={`HeaderChevron ${menuOpen ? "flip" : ""}`}
               />
             </button>
-            <button className="HeaderButton" onClick={() => handleNavigate("/contact")}>Contact</button>
+            <button
+              className="HeaderButton"
+              onClick={() => handleNavigate("/contact")}
+            >
+              Contact
+            </button>
           </div>
           <div
             className="HeaderHamburger"
@@ -44,6 +63,21 @@ const Header = () => {
           </div>
           <Sidebar />
         </nav>
+
+        <motion.div
+          id="scroll-indicator"
+          style={{
+            scaleX: scrollYProgress,
+            position: "fixed",
+            top: 80,
+            left: 0,
+            height: 2,
+            backgroundColor: "var(--primary-green)",
+            transformOrigin: "left",
+            zIndex: 9999,
+            width: "100%",
+          }}
+        />
       </header>
       <MenuDropdown menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </>

@@ -1,5 +1,5 @@
 .MenuDropdownContainer {
-  position: absolute;
+  position: fixed;
   top: 90px;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   right: 18px;
   padding-bottom: 12px;
   border-radius: 8px;
+  z-index: 100;
 }
 
 .MenuDropdownContainer h4 {
