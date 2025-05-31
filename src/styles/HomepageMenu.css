@@ -1,0 +1,99 @@
+.HomepageMenuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: var(--background-color);
+  gap: 64px;
+}
+
+.MenuHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.MenuSplitText h1 {
+  font-size: 44.44px;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+.MenuSplitText h1:first-child {
+  color: var(--primary-red);
+}
+
+.MenuSplitText h1:last-child {
+  color: var(--primary-green);
+}
+
+.MenuHeader p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  max-width: 60ch;
+  text-align: center;
+}
+
+.MenuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.MenuCard {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MenuCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.MenuOverlay {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  width: 100%;
+}
+
+.MenuOverlay h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.MenuOverlay p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .MenuGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .MenuHeader p {
+    max-width: 90%;
+  }
+
+  .MenuSplitText h1 {
+    font-size: 36px;
+  }
+}
