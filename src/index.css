@@ -2,16 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 .flip {
   transform: rotate(180deg);
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 :root {
   --background-color: #000;
   --alt-background-color: #111827;
-  --primary-red: #DC2626
+  --primary-red: #DC2626;
+  --primary-green: #20BD17;
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+html {
+  scrollbar-width: none;      
+  -ms-overflow-style: none; 
+}
+
+html, body {
+  height: 100%;
+  overflow: auto;
 }
