@@ -9,7 +9,7 @@ const MenuDropdown = ({ menuOpen, setMenuOpen }) => {
   const dropdownRef = useRef();
 
   const handleNavigate = (path) => {
-    setMenuOpen(false);
+    setMenuOpen('hidden');
     navigate(path);
   };
 
@@ -17,14 +17,17 @@ const MenuDropdown = ({ menuOpen, setMenuOpen }) => {
     if (!menuOpen) return;
 
     const handleClickOutside = (e) => {
-      if (menuOpen) return;
+      if (e.target.hasAttribute("data-dropdown-activator")) {
+        return;
+      }
+
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setMenuOpen(false);
+        setMenuOpen('hidden');
       }
     };
 
     const handleScroll = () => {
-      setMenuOpen(false);
+      setMenuOpen('hidden');
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -39,7 +42,7 @@ const MenuDropdown = ({ menuOpen, setMenuOpen }) => {
   return (
     <div
       ref={dropdownRef}
-      className={`MenuDropdownContainer ${menuOpen ? "visible" : "hidden"}`}
+      className={`MenuDropdownContainer ${menuOpen}`}
     >
       <h4>Our Menu's</h4>
       {menuList.map((menu) => (

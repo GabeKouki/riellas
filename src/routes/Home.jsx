@@ -5,6 +5,7 @@ import HomepageMenu from '../components/HomepageMenu'
 import HomepageReviews from '../components/HomepageReviews'
 import HomepageGallery from '../components/HomepageGallery'
 import HomepageContact from '../components/HomepageContact'
+import ToolTip from '../components/ToolTip'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
     <HomepageReviews />
     <HomepageGallery />
     <HomepageContact />
+    <ToolTip />
     </>
   )
 }

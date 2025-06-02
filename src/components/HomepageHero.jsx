@@ -1,11 +1,11 @@
 import "../styles/HomepageHero.css";
-
 import React from "react";
 import HomepageHeroImage from "../assets/HeroHomepageImage.png";
+
 const HomepageHero = () => {
   return (
     <div className="HomepageHeroContainer">
-      <img className="HomepageHeroImage" src={HomepageHeroImage} alt="" />
+      <img className="HomepageHeroImage" src={HomepageHeroImage} alt="Riella's Homestyle Hero Background" />
       <h1>Riella's Homestyle</h1>
       <p>
         Where every dish tells a story of tradition, warmth, and homestyle

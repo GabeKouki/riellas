@@ -5,26 +5,26 @@ export const businessHours = [
   },
   {
     day: "Tuesday",
-    hours: "12:00 PM - 9:30 PM",
+    hours: "12p - 9:30p",
   },
   {
     day: "Wednesday",
-    hours: "12:00 PM - 9:30 PM",
+    hours: "12p - 9:30p",
   },
   {
     day: "Thursday",
-    hours: "12:00 PM - 9:30 PM",
+    hours: "12p - 9:30p",
   },
   {
     day: "Friday",
-    hours: "12:00 PM - 10:00 PM",
+    hours: "12p - 10p",
   },
   {
     day: "Saturday",
-    hours: "12:00 PM - 10:00 PM",
+    hours: "12p - 10p",
   },
   {
     day: "Sunday",
-    hours: "12:00 PM - 9:30 PM",
+    hours: "12p - 9:30p",
   }
 ]
