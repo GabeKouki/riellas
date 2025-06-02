@@ -14,15 +14,5 @@
   --alt-background-color: #111827;
   --primary-red: #DC2626;
   --primary-green: #20BD17;
-}
-
-body::-webkit-scrollbar,
-html::-webkit-scrollbar {
-  display: none;
-}
-
-body,
-html {
-  scrollbar-width: none;      
-  -ms-overflow-style: none; 
+  --primary-gray: #323232;
 }
