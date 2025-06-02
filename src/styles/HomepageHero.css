@@ -8,6 +8,9 @@
   height: 100vh;
   gap: 24px;
   background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .HomepageHeroContainer img {
@@ -25,7 +28,8 @@
   font-weight: 700;
   line-height: 72px;
   color: #fff;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 
 .HomepageHeroContainer p {
@@ -35,6 +39,7 @@
   line-height: 32px;
   max-width: 654px;
   font-family: "Inter", sans-serif;
+  margin: 0;
 }
 
 .CTAButton {
@@ -47,9 +52,87 @@
   font-weight: 700;
   line-height: 28px;
   cursor: pointer;
-  transition: all 0.5s ease ;
+  transition: all 0.5s ease;
 }
 
 .CTAButton:hover {
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .HomepageHeroContainer {
+    height: 80vh;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .HomepageHeroContainer h1 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .HomepageHeroContainer p {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 500px;
+  }
+
+  .CTAButton {
+    padding: 14px 28px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+/* Mobile and below (max-width: 768px) */
+@media (max-width: 768px) {
+  .HomepageHeroContainer {
+    height: 70vh;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  .HomepageHeroContainer h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .HomepageHeroContainer p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 400px;
+  }
+
+  .CTAButton {
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .HomepageHeroContainer {
+    height: 60vh;
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .HomepageHeroContainer h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .HomepageHeroContainer p {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 300px;
+  }
+
+  .CTAButton {
+    padding: 10px 20px;
+    font-size: 13px;
+    line-height: 18px;
+  }
 }

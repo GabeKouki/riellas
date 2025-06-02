@@ -50,8 +50,13 @@
   animation: slideBounceIn 0.8s ease;
 }
 
+.MenuDropdownContainer.initial {
+  visibility: hidden;
+}
+
 .MenuDropdownContainer.hidden {
   animation: slideBounceOut 0.8s ease forwards;
+  pointer-events: none;
 }
 
 @keyframes slideBounceIn {

@@ -1,0 +1,23 @@
+.ToolTipContainer {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: var(--background-color);
+  padding-bottom: 60px;
+  padding: 16px;
+}
+
+.ToolTipContainer p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #9CA3AF;
+  background-color: var(--alt-background-color);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  max-width: 55ch;
+  border: 1px solid #1F2937;
+}

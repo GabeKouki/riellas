@@ -1,5 +1,5 @@
 import DineInImage from "../assets/DineInImage.png";
-import TakeOutImage from "../assets/TakeOutImage.png";
+import TakeOutImage from "../assets/TakeoutImage.png";
 import CateringImage from "../assets/CateringImage.png";
 import PartyImage from "../assets/PartyImage.png";
 

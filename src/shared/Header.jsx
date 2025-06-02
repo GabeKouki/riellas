@@ -11,16 +11,26 @@ import { motion, useScroll } from "framer-motion";
 
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState("initial");
   const { sidebarOpen, setSidebarOpen } = useHeader();
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
 
 
   const handleNavigate = (endpoint) => {
-    setMenuOpen(false);
+    setMenuOpen('hidden');
     navigate(`${endpoint}`);
   };
+
+  const handleSetMenu = () => {
+    if (menuOpen !== 'visible') {
+      setMenuOpen('visible');
+    } else {
+      setMenuOpen('hidden');
+    }
+    
+
+  }
 
   return (
     <>
@@ -40,12 +50,15 @@ const Header = () => {
               Home
             </button>
             <button
-              className={`HeaderButton ${menuOpen ? "fill" : ""}`}
-              onClick={() => setMenuOpen(!menuOpen)}
+              className={`HeaderButton ${menuOpen === 'visible' ? "fill" : ""}`}
+              onClick={() => handleSetMenu()}
+              data-dropdown-activator
             >
-              Menu{" "}
+              Menu
               <ChevronDown
-                className={`HeaderChevron ${menuOpen ? "flip" : ""}`}
+                className={`HeaderChevron ${menuOpen === 'visible' ? "flip" : ""}`}
+                data-dropdown-activator
+
               />
             </button>
             <button
