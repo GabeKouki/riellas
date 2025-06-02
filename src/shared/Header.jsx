@@ -57,6 +57,8 @@ const Header = () => {
               Menu
               <ChevronDown
                 className={`HeaderChevron ${menuOpen === 'visible' ? "flip" : ""}`}
+                data-dropdown-activator
+
               />
             </button>
             <button
