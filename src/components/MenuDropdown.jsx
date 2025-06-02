@@ -27,6 +27,9 @@ const MenuDropdown = ({ menuOpen, setMenuOpen }) => {
     };
 
     const handleScroll = () => {
+      if (menuOpen === 'initial') {
+        return;
+      }
       setMenuOpen('hidden');
     };
 
