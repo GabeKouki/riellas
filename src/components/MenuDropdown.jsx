@@ -21,6 +21,10 @@ const MenuDropdown = ({ menuOpen, setMenuOpen }) => {
         return;
       }
 
+      if (menuOpen === 'initial') {
+        return;
+      }
+
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setMenuOpen('hidden');
       }

@@ -1,5 +1,7 @@
+
 import "./App.css";
 
+import Menu from "./routes/Menu";
 import Home from "./routes/Home";
 import Header from "./shared/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,6 +16,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/menu/:menu" element={<Menu />} />
           </Routes>
         </HeaderProvider>
       </BrowserRouter>
