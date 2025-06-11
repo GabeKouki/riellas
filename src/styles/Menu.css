@@ -107,6 +107,69 @@ h1 {
   animation: rippleFadeIn 0.8s ease-out forwards;
 }
 
+.additional-cost {
+  color: var(--secondary-gray);
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 4px;
+  font-family: "Inter", sans-serif;
+}
+
+.ContactInfo, .ServiceInfo, .IncludedItems {
+  margin: 24px auto;
+  padding: 20px;
+  background-color: var(--alt-background-color);
+  border-radius: 8px;
+  max-width: 1200px;
+  text-align: left;
+  color: white;
+}
+
+.ContactInfo h4, .ServiceInfo h4, .IncludedItems h4 {
+  color: var(--secondary-red);
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.ContactInfo p, .ServiceInfo p, .IncludedItems p {
+  color: var(--secondary-gray);
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+  margin: 8px 0;
+}
+
+/* Fix the animation issue by ensuring proper transform reset */
+.MenuCards {
+  background-color: var(--alt-background-color);
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  border-radius: 8px;
+  
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: rippleFadeIn 0.8s ease-out forwards;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MenuCards:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure animation completes properly */
+.MenuCards.animation-complete {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 @keyframes rippleFadeIn {
   0% {
     opacity: 0;

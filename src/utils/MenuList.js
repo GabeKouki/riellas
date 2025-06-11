@@ -23,7 +23,7 @@ export const menuList = [
     image: CateringImage
   },
   { displayName: "Party Packages", 
-    endpoint: "party",
+    endpoint: "party-packages",
     infoText: "Create memorable celebrations with our custom packages",
     image: PartyImage
   },
