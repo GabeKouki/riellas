@@ -44,8 +44,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  padding: 0 80px;
   width: 100%;
-  max-width: 1000px;
+}
+
+@media screen and (max-width: 768px) {
+  .MenuGrid {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .MenuGrid {
+    padding: 0 20px;
+  }
 }
 
 .MenuCard {
