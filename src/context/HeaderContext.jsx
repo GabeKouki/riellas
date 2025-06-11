@@ -18,3 +18,4 @@ export const HeaderProvider = ({ children }) => {
 };
 
 export const useHeader = () => useContext(HeaderContext);
+
